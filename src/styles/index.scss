@@ -16,17 +16,17 @@ div.col {
     background-color:rgb(28, 28, 28);
     border-radius: 5px;
     text-align: center;
-    width: fit-content;
+    width: auto;
     flex: 0 0 auto;
     margin-inline: 10px;
+    padding-inline: 1.5rem;
 }
-
 .button--wrapper {
     padding-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
-
+    
     & > * {
         border: none;
         background-color: white;
@@ -38,7 +38,7 @@ div.col {
         height: 6rem;
         outline: none;
         transition: background-color 250ms ease-in-out, transform 50ms ease-in-out;
-
+        
         &:hover {
             background-color: rgb(230, 230, 230);
         }
@@ -48,5 +48,17 @@ div.col {
         &:focus {
             background-color: rgb(124, 240, 255);
         }
+    }
+}
+@media screen and (max-width: 772px) {
+    div.col {
+        margin-inline: 4px;
+        padding-inline: 0.8rem;
+        font-size: 35px;
+    }
+    .button--wrapper > * {
+        font-size: 1rem;
+        width: 4rem;
+        height: 4rem;
     }
 }
